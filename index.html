@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unreal Engine Developer - Geoffrey Minez</title>
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Volet de gauche -->
+  <div id="header">
+    <button class="fixed-button" onclick="download('files/CV Minez Geoffrey 2024.pdf')"><a data-key="download">Download CV</a></button>
+  </div>
+
+  <!-- Sidebar -->
+  <section id="sidebar">
+    <div class="inner">
+      <div class="language-selector">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/langfr-225px-Flag_of_France.svg.png" width="30" height="20" alt="Français" id="lang-fr" onclick="changeLanguage('fr')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" width="30" height="20" alt="English" id="lang-en" onclick="changeLanguage('en')">
+      </div>
+        <a class="image avatar"><img src="./images/Divers/photoProfil.jpg"/></a>
+        <h1>Geoffrey Minez</h1>
+        <h4 data-key="title"><img src="https://www.svgrepo.com/show/394536/unreal-engine.svg" alt="Unreal Engine Logo">Unreal Engine developer</h4>
+        <div class="logoDev">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png" alt="C++"  width="45.5" height="51.25"/></a>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Python"  width="45.5" height="51.25"/></a>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png" alt="JavaScript"  width="50" height="60"/></a>
+        </div>
+        
+        <ul class="info-list">
+          <li><strong >Email : </strong><a href="mailto:geoffrey.minez@gmail.com">geoffrey.minez@gmail.com</a></li>
+          <li><strong data-key="home">Home : </strong><a data-key="homecontent">Brussels, Belgium</a></li>
+          <li><strong data-key="na">Nationality : </strong><a data-key="nacontent">Belgian</a></li>
+        </ul>
+        <div class="actions">
+          <!-- <button id="show-portfolio" class="button" data-key="showp">Full Portfolio</button> -->
+        </div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/geoffrey-minez-87a9301a3/" target="_blank" class="icon linkedin" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/GEOX2M" target="_blank" class="icon github" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:geoffrey.minez@gmail.com" class="icon gmail" title="Gmail">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+    </div>
+  </section>
+
+  <div id="bg">
+	<div id="bg-video">
+	  <video loop="loop" autoplay playsinline muted>
+		<source type="video/mp4" src="" />
+		<source type="video/webm" src="" />
+	  </video>
+	</div>
+  </div>
+
+  <div id="Portfolio">
+
+    <!-- One -->
+      <section id="one">
+        <header class="major">
+          <h2 data-key="titlep">Passion et Expertise en Développement de Logiciels Vidéoludiques</h2>
+        </header>
+        <p data-key="cvText">Après mes études supérieures en informatique à Bruxelles, j’ai eu l’opportunité de travailler sur de nombreux projets avec le moteur de jeu Unreal Engine. Ce fut une grande surprise de voir mes compétences en informatique et ma passion pour les jeux vidéo se combiner si naturellement, me permettant de bâtir une carrière spécialisée dans le développement de logiciels. Je suis extrêmement motivé à l’idée de poursuivre cette voie au sein d’un grand projet d’équipe. J’ai hâte de continuer cette aventure et de développer de nouvelles compétences à vos côtés !</p>
+      </section>
+
+      <div id="">
+      <section class="object-grid">
+        <h2 data-key="projects">Quelques projets</h2>
+        <h2></h2>
+        <div class="object">
+          <h3>AI Assistant</h3>
+          <section class="media-container">
+              <iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://player.vimeo.com/video/1043241278?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"" title="videoDemoAiAssistant"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+          </section>
+          <p data-key="aiassistant">L’objectif de ce projet était de personnifier un LLM (Large Language Model). Pour y parvenir, j’ai combiné la console en temps réel d’OpenAI, Unreal Engine, et Nvidia Audio2Face. La création d’animations réalistes en temps réel a été un défi en soi, mais le plus complexe a été d’orienter les réponses vers des scénarios spécifiques et exigeants, tels que l’assistance dans un service des urgences. Mon projet à bien été acceuilli par le public dans divers salon tel que Living Tomorrow, le Kick Festival et le Proximus Event de Malines.</p>
+        </div>
+        <div class="object" onclick="redirectTo('https://poolpio.com/project/jailbirds/')">
+          <h3>Jailbirds</h3>
+          <section class="media-container">
+            <video controls muted loop width="100%" onmouseover="this.play()" onmouseout="this.pause()">
+              <source src="https://video.fastly.steamstatic.com/store_trailers/257034593/movie480_vp9.webm?t=1719576955" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <!-- <img src="https://video.fastly.steamstatic.com/store_trailers/257034593/movie480_vp9.webm?t=1719576955" alt="Object 2 Image"> -->
+        </section>
+          <p data-key="jailbirds">Jailbirds est un projet d’animation en temps réel en réalité virtuelle auquel j’ai contribué de manière significative. J’ai été responsable de l’intégration de tous les assets, de la création de certains shaders, effets de post-traitement, et systèmes de particules. Mon rôle principal a été d’intégrer la réalité virtuelle au projet. L’expérience permet aux utilisateurs de se déplacer dans l’environnement et d’observer les scènes du film sous n’importe quel angle. Certaines scènes se déclenchent uniquement lorsque l’utilisateur les regarde, ajoutant une dimension interactive et immersive unique.</p>
+        </div>
+        <div class="object" onclick="redirectTo('https://poolpio.com/project/dubai-football-immersive-game/')">
+          <h3>Goalkeeper game</h3>
+          <section class="media-container">
+            <iframe style="position:relative;top:0;left:0;width:100%;height:100%;"  src="https://player.vimeo.com/video/1043251098?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="GoalkeeperGame"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+          <p data-key="goalkeeper">Poolpio m'a donné la charge de réaliser un petit jeu de tir au but qui serait installé dans une salle d'arcade physique, je devais pour cela créer une projection de deux écrans. Un capteur tactile détectait les coordonnées de l’impact de la balle, que j’utilisais pour simuler virtuellement la trajectoire et la continuité du ballon dans le monde virtuel. De plus, il fallait connecter mon application Unreal à une tablette, permettant de coordonner le match, de changer le mode de jeu, de relancer le compte à rebours, etc. </p>
+        </div>
+        <div class="object" onclick="redirectTo('https://okus.be/immersive-fokus/')">
+          <h3>Immersive Fokus</h3>
+          <section class="media-container">
+            <iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://player.vimeo.com/video/1043251158?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ImmersiveFokus"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+          <p data-key="immersive">Un artiste nommé Manu Di Martino m'a demandé de réaliser une expérience VR autonome pour le Quest 3, mettant en scène sa chorégraphie de danseurs conceptuels. L'objectif de l'application est de pouvoir orchestrer les danseurs, accélérer ou ralentir leurs mouvements, les déplacer dans l'espace et créer des formations. Nous avons également longuement réfléchi à sublimer ses personnages avec des effets visuels.</p>
+        </div>
+        <div class="object" onclick="redirectTo('https://poolpio.com/project/open-days-european-commission/')">
+          <h3>Handtracking-Diaporama</h3>
+          <section class="media-container">
+            <iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://player.vimeo.com/video/1043251146?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="handtracking-diaporama"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+          <p data-key="handtracking">J'ai eu la responsabilité de développer ce projet pour une exposition de la Commission Européenne. Mon objectif était de présenter leurs diapositives dans une application ludique avec un personnage et une webcam. Le jeu consistait à pouvoir lire et changer les diapositives avec des gestes de la main. Pour ce faire, j'ai intégré à Unreal Engine un système personnalisé de handtracking, basé sur les solutions fournies par MediaPipe et OpenCV.</p>
+        </div>
+        <div class="object" onclick="redirectTo('https://www.abconcerts.be/fr/agenda/nouvelle-belgique-zwangere-di-guy-taal/a105J000000WCNVQA4')">
+          <h3>Nouvelle-belgique</h3>
+          <section class="media-container">
+            <iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://player.vimeo.com/video/1043251177?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="NouvelleBelgique"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+          <p data-key="nouvellebelgique">En collaboration avec Granola Studio, l'équipe Poolpio et moi avons développé un concert virtuel pour le rappeur flamand ZWANGERE di-GUY. Dans ce projet, j'ai eu la charge de créer tous les effets de particules, de projections, ainsi que la chorégraphie et la synchronisation des lumières en multijoueur. Nous avons également permis à un DJ de contrôler de nombreuses commandes pour créer en live l'ambiance lumineuse du concert.</p>
+        </div>
+        <div class="object" onclick="redirectTo('https://example.com')">
+          <h3>Walibi Esport Stadium</h3>
+          <section class="media-container">
+            <iframe style="position:relative;top:0;left:0;width:100%;height:100%;"  src="https://player.vimeo.com/video/1043251063?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Esport"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+          <p data-key="wallibi">Le parc d'attractions Walibi organisait un événement e-sport sur Rocket League. Pour l'occasion, nous avons développé un hub où les joueurs pouvaient se rassembler en ligne avec leur avatar, assister aux matchs de Rocket League diffusés sur les écrans du stade, connectés directement à une chaîne Twitch e-sport.</p>
+        </div>
+        <div class="object" onclick="redirectTo('https://example.com')">
+          <h3>Brussels Planetarium virtual tour</h3>
+          <section class="media-container">
+            <iframe style="position:relative;top:0;left:0;width:100%;height:100%;"  src="https://player.vimeo.com/video/1043251043?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="BrusselsPlanetarium"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+          <p data-key="planetarium">J'ai eu pour mission de créer une application pour le casque de réalité virtuelle Vive Focus Plus. Cette application permet à l'utilisateur de voyager à travers des captures 360° photo, video de l'Observatoire Royal de Bruxelles. En se focalisant sur certains éléments, l'utilisateur peut faire apparaître devant lui des textes et des vidéos descriptifs, le tout disponible en trois langues : français, anglais et néerlandais.</p>
+        </div>
+        <div class="object" onclick="redirectTo('https://example.com')">
+          <h3 data-key="student">Projets étudiant</h3>
+          <section class="media-container">
+            <iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://player.vimeo.com/video/1043251237?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"" title="ProjetsEtudiant"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+         </section>
+          <p data-key="studentcontent">Voici quelques projets que j'ai réalisés durant mes études. Tous ont été développés en C++ en respectant le design pattern Model-View-Controller. L'interface utilisateur (UI) a été conçue à l'aide du framework Qt Creator.</p>
+        </div>
+        <!-- Add more objects as needed -->
+      </section>
+    </div>
+
+
+
+      <section id="galerie">
+        <div class="photos">
+          <a href="https://www.instagram.com/p/DC4Dkakt7wE/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">
+            <img src="images/AI-Assistant/AI-Assistant_Malines_02.png" alt="Post Instagram">
+          </a>
+          <a href="https://www.instagram.com/p/DC65pldNKDp/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">
+            <img src="images/AI-Assistant/AI-Assistant_Malines_01.png" alt="Post Instagram">
+          </a>
+          <a href="https://www.instagram.com/p/CNwoBI9B7wL/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">
+            <img src="images/Divers/CapturePoolpio.PNG" alt="Post Instagram">
+          </a>
+          <a>
+            <img src="images/Divers/1729862516218.jpg" alt="Post Instagram">
+          </a>
+          <a href="https://store.steampowered.com/app/2827920/Jailbirds/?l=english" target="_blank">
+            <img src="images/Divers/jailbirds.png">
+          </a>
+        </div>
+      </section>
+  </div>
+
+  <footer id="footer">
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
+
+
+
