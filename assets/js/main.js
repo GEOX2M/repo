@@ -36,7 +36,7 @@ const translations = {
 	  formation01contentli05 : "Les infrastructures réseau",
 	  formation01contentli06 : "La programmation système sous Linux et Windows",
 	  formation02content : "J'ai appri à utiliser ce framework en suivant une formation Udemy intitulée <a href='https://www.udemy.com/course/unreal-engine-5-gas-top-down-rpg/'>'Unreal Engine 5 - Gameplay Ability System - Top Down RPG'</a>",
-	  footComment : "Le site web a été conçu par mes soins avec HTML, CSS et JavaScript",
+	  footComment : "Ce site web a été conçu par mes soins avec HTML, CSS et JavaScript",
 	  website : "Hébergé sur <a href='https://github.com/GEOX2M'>github</a>",
 	},
 	en: {
@@ -71,7 +71,7 @@ const translations = {
 	  formation01contentli05: "Network infrastructures",
 	  formation01contentli06: "System programming on Linux and Windows",
 	  formation02content: "I learned to use this framework by following a Udemy course titled <a href='https://www.udemy.com/course/unreal-engine-5-gas-top-down-rpg/'>‘Unreal Engine 5 - Gameplay Ability System - Top Down RPG’</a>",
-	  footComment : "The website was crafted by me using HTML, CSS, and JavaScript.",
+	  footComment : "This website was crafted by me using HTML, CSS, and JavaScript.",
 	  website : "Hosted on <a href='https://github.com/GEOX2M'>github</a>",
 	},
   };

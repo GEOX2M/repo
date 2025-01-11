@@ -2181,10 +2181,10 @@ input, select, textarea {
 		margin-bottom: 50px;
 	  }
 	  
-	  .formation-item h3 {
+	  .formation-item li {
 		margin-top: 10px;
-		margin-left: 20px;
-		font-size: 1.2em;
+		margin-left: 50px;
+		font-size: 1em;
 		color: #999;
 	  }
 	  
