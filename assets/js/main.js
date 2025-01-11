@@ -26,7 +26,18 @@ const translations = {
 	  planetarium : "J'ai eu pour mission de créer une application pour le casque de réalité virtuelle Vive Focus Plus. Cette application permet à l'utilisateur de voyager à travers des captures 360° photo, video de l'Observatoire Royal de Bruxelles. En se focalisant sur certains éléments, l'utilisateur peut faire apparaître devant lui des textes et des vidéos descriptifs, le tout disponible en trois langues : français, anglais et néerlandais.",
 	  student : "Projets étudiant",
 	  studentcontent : "Voici quelques projets que j'ai réalisés durant mes études. Tous ont été développés en C++ en respectant le design pattern Model-View-Controller. L'interface utilisateur (UI) a été conçue à l'aide du framework Qt Creator.",
-
+	  formations : "Formations",
+	  formation01 : "Informatique et systèmes, finalité réseaux et télécommunication",
+	  formation01content : "Diplômé d’un bachelier (3 ans) de l’<a href='https://he2b.be/'>HE2B</a> en 2020, une école supérieure d’informatique située à Bruxelles, j’ai acquis les bases fondamentales de l’informatique, notamment :",
+	  formation01contentli01 : "Les bases en algorithmique",
+	  formation01contentli02 : "Les langages de programmation : Java, C/C++, JavaScript, PHP",
+	  formation01contentli03 : "Les langages de balisage : HTML, XML",
+	  formation01contentli04 : "Les langages de requête : Oracle, MySQL, PostgreSQL",
+	  formation01contentli05 : "Les infrastructures réseau",
+	  formation01contentli06 : "La programmation système sous Linux et Windows",
+	  formation02content : "J'ai appri à utiliser ce framework en suivant une formation Udemy intitulée <a href='https://www.udemy.com/course/unreal-engine-5-gas-top-down-rpg/'>'Unreal Engine 5 - Gameplay Ability System - Top Down RPG'</a>",
+	  footComment : "Le site web a été conçu par mes soins avec HTML, CSS et JavaScript",
+	  website : "Hébergé sur <a href='https://github.com/GEOX2M'>github</a>",
 	},
 	en: {
 	  download: "Download CV",
@@ -49,13 +60,26 @@ const translations = {
 	  wallibi: "The Walibi amusement park organized an e-sports event for Rocket League. For this occasion, we developed a hub where players could gather online with their avatars, watch Rocket League matches on stadium screens, and stream directly from the e-sports Twitch channel.",
 	  planetarium: "I was tasked with creating an application for the Vive Focus Plus virtual reality headset. This application allows users to travel through 360° photo and video captures of the Royal Observatory of Belgium. By focusing on certain elements, users can make descriptive texts and videos appear in front of them, all available in three languages: French, English, and Dutch.",
 	  student: "Student Projects",
-	  studentcontent: "Here are some projects I worked on during my studies. All of them were developed in C++ using the Model-View-Controller design pattern. The user interface (UI) was created using the Qt Creator framework."
-
-
+	  studentcontent: "Here are some projects I worked on during my studies. All of them were developed in C++ using the Model-View-Controller design pattern. The user interface (UI) was created using the Qt Creator framework.",
+	  formations: "Education",
+	  formation01: "Computer Science and Systems, specializing in Networks and Telecommunications",
+	  formation01content: "Graduated with a Bachelor's degree (3 years) from <a href='https://he2b.be/'>HE2B</a> in 2020, a higher education institution in computer science located in Brussels. I acquired the fundamental foundations of computer science, including:",
+	  formation01contentli01: "Basics of algorithms",
+	  formation01contentli02: "Programming languages: Java, C/C++, JavaScript, PHP",
+	  formation01contentli03: "Markup languages: HTML, XML",
+	  formation01contentli04: "Query languages: Oracle, MySQL, PostgreSQL",
+	  formation01contentli05: "Network infrastructures",
+	  formation01contentli06: "System programming on Linux and Windows",
+	  formation02content: "I learned to use this framework by following a Udemy course titled <a href='https://www.udemy.com/course/unreal-engine-5-gas-top-down-rpg/'>‘Unreal Engine 5 - Gameplay Ability System - Top Down RPG’</a>",
+	  footComment : "The website was crafted by me using HTML, CSS, and JavaScript.",
+	  website : "Hosted on <a href='https://github.com/GEOX2M'>github</a>",
 	},
   };
 
-  function download(url) {
+  let lang = 'en';  // Variable globale
+
+  function download() {
+	url = lang === 'en' ? "./files/CV Minez Geoffrey 2024 en.pdf" : "./files/CV Minez Geoffrey 2024 fr.pdf" 
 	const a = document.createElement('a')
 	a.href = url
 	a.download = url.split('/').pop()
@@ -64,11 +88,12 @@ const translations = {
 	document.body.removeChild(a)
   }
 
-function changeLanguage(lang) {
+function changeLanguage(newlang) {
+	lang = newlang
 	const elements = document.querySelectorAll("[data-key]");
 	elements.forEach((el) => {
 	  const key = el.getAttribute("data-key");
-	  el.textContent = translations[lang][key];
+	  el.innerHTML = translations[lang][key];
 	});
   }
   
@@ -82,6 +107,7 @@ function changeLanguage(lang) {
   
 	// Si besoin de manipuler le body
 	document.body.style.overflow = 'auto'; // Exemple : Permettre le défilement
+	document.body.style.overflowX = "hidden";
   });
 (function() {
 

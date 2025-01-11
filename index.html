@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 <body>
   <!-- Volet de gauche -->
   <div id="header">
-    <button class="fixed-button" onclick="download('files/CV Minez Geoffrey 2024.pdf')"><a data-key="download">Download CV</a></button>
+    <button class="fixed-button" onclick="download()"><a data-key="download">Download CV</a></button>
   </div>
 
   <!-- Sidebar -->
@@ -31,8 +31,8 @@
         
         <ul class="info-list">
           <li><strong >Email : </strong><a href="mailto:geoffrey.minez@gmail.com">geoffrey.minez@gmail.com</a></li>
-          <li><strong data-key="home">Home : </strong><a data-key="homecontent">Brussels, Belgium</a></li>
-          <li><strong data-key="na">Nationality : </strong><a data-key="nacontent">Belgian</a></li>
+          <li><strong data-key="home">Home : </strong><a href="https://en.wikipedia.org/wiki/City_of_Brussels" data-key="homecontent">Brussels, Belgium</a></li>
+          <li><strong data-key="na">Nationality : </strong><a href="https://en.wikipedia.org/wiki/Belgium" data-key="nacontent">Belgian</a></li>
         </ul>
         <div class="actions">
           <!-- <button id="show-portfolio" class="button" data-key="showp">Full Portfolio</button> -->
@@ -68,6 +68,28 @@
           <h2 data-key="titlep">Passion et Expertise en Développement de Logiciels Vidéoludiques</h2>
         </header>
         <p data-key="cvText">Après mes études supérieures en informatique à Bruxelles, j’ai eu l’opportunité de travailler sur de nombreux projets avec le moteur de jeu Unreal Engine. Ce fut une grande surprise de voir mes compétences en informatique et ma passion pour les jeux vidéo se combiner si naturellement, me permettant de bâtir une carrière spécialisée dans le développement de logiciels. Je suis extrêmement motivé à l’idée de poursuivre cette voie au sein d’un grand projet d’équipe. J’ai hâte de continuer cette aventure et de développer de nouvelles compétences à vos côtés !</p>
+      </section>
+
+      <section>
+        <div class="formation">
+          <h2 data-key="formations">Formations</h2>
+          <div class="formation-item">
+            <h3>Unreal Engine - Gameplay ability system (GAS)</h3>
+            <p data-key="formation02content">J'ai appri à utiliser ce framework en suivant une formation Udemy intitulée <a href="https://www.udemy.com/course/unreal-engine-5-gas-top-down-rpg/">"Unreal Engine 5 - Gameplay Ability System - Top Down RPG"</a></p>
+          </div>
+          <div class="formation-item">  
+            <h3 data-key="formation01">Informatique et systèmes, finalité réseaux et télécommunication</h3>  
+            <p data-key="formation01content">Diplômé d’un bachelier (3 ans) de l’<a href="https://he2b.be/">HE2B</a> en 2020, une école supérieure d’informatique située à Bruxelles, j’ai acquis les bases fondamentales de l’informatique, notamment :</p>
+            <ul>
+              <li data-key="formation01contentli01">Les bases en algorithmique</li>
+              <li data-key="formation01contentli02">Les langages de programmation : Java, C/C++, JavaScript, PHP</li>
+              <li data-key="formation01contentli03">Les langages de balisage : HTML, XML</li>
+              <li data-key="formation01contentli04">Les langages de requête : Oracle, MySQL, PostgreSQL</li>
+              <li data-key="formation01contentli05">Les infrastructures réseau</li>
+              <li data-key="formation01contentli06">La programmation système sous Linux et Windows</li>
+            </ul>   
+          </div>  
+        </div>
       </section>
 
       <div id="">
@@ -143,7 +165,7 @@
         </div>
         <!-- Add more objects as needed -->
       </section>
-    </div>
+      </div>
 
 
 
@@ -158,17 +180,20 @@
           <a href="https://www.instagram.com/p/CNwoBI9B7wL/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">
             <img src="images/Divers/CapturePoolpio.PNG" alt="Post Instagram">
           </a>
-          <a>
-            <img src="images/Divers/1729862516218.jpg" alt="Post Instagram">
+          <a href="https://wallonia.be/en/news/walloon-gems-kikk-festival-2024" target="_blank">
+            <img src="https://wallonia.be/sites/default/files/users/user16746/PoolpioOK_0.jpeg" alt="KIKK Festival 2024">
           </a>
           <a href="https://store.steampowered.com/app/2827920/Jailbirds/?l=english" target="_blank">
             <img src="images/Divers/jailbirds.png">
           </a>
         </div>
+        <p data-key="footComment">Le site web a été conçu par mes soins avec HTML, CSS et JavaScript</p>
+        <p data-key="website">Hébergé sur <a href="https://github.com/GEOX2M">github</a></p>
       </section>
   </div>
 
   <footer id="footer">
+    
   </footer>
 
   <script src="./assets/js/main.js"></script>
