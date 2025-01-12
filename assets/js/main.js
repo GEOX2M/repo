@@ -38,6 +38,10 @@ const translations = {
 	  formation02content : "J'ai appri à utiliser ce framework en suivant une formation Udemy intitulée <a href='https://www.udemy.com/course/unreal-engine-5-gas-top-down-rpg/'>'Unreal Engine 5 - Gameplay Ability System - Top Down RPG'</a>",
 	  footComment : "Ce site web a été conçu par mes soins avec HTML, CSS et JavaScript",
 	  website : "Hébergé sur <a href='https://github.com/GEOX2M'>github</a>",
+	  experience : "Expérience professionnelle",
+	  exp01 : "Lead developper chez <a href='https://poolpio.com/'>Poolpio</a> & <a href='https://magicloom.studio'>MagicLoom</a>",
+	  exp01content : "Responsable du développement et de la programmation chez Poolpio et MagicLoom, je supervise les aspects interactifs des projets, depuis l'analyse jusqu'au déploiement final. La majeure partie de ma carrière s'est déroulée avec le moteur de jeu Unreal Engine, où j'ai acquis une expertise polyvalente : programmation des mécaniques de jeu, création de shaders, logique d'animation, conception d'effets de particules, éclairage, modélisation d'environnements, développement d'interfaces utilisateur (UI), ainsi que la mise en place et la préparation de projets. J'aime apporter mon aide autant que possible, quel que soit le domaine de compétence.",
+	  exp01legend : "Janvier 2021 - Aujourd'hui",
 	},
 	en: {
 	  download: "Download CV",
@@ -73,6 +77,10 @@ const translations = {
 	  formation02content: "I learned to use this framework by following a Udemy course titled <a href='https://www.udemy.com/course/unreal-engine-5-gas-top-down-rpg/'>‘Unreal Engine 5 - Gameplay Ability System - Top Down RPG’</a>",
 	  footComment : "This website was crafted by me using HTML, CSS, and JavaScript.",
 	  website : "Hosted on <a href='https://github.com/GEOX2M'>github</a>",
+	  experience : "Professional experience",
+	  exp01 : "Lead developper at <a href='https://poolpio.com/'>Poolpio</a> & <a href='https://magicloom.studio'>MagicLoom</a>",
+	  exp01content : "As a development and programming lead at Poolpio and MagicLoom, I oversee the interactive aspects of projects, from analysis to final deployment. Most of my career has been centered around the Unreal Engine, where I have gained versatile expertise: programming game mechanics, creating shaders, animation logic, designing particle effects, lighting, environment modeling, user interface (UI) development, as well as project setup and preparation. I enjoy being as helpful as possible, no matter the field of expertise.",
+	  exp01legend : "January 2021 - Today",
 	},
   };
 

@@ -325,7 +325,7 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1.1em;
+		font-size: 1.4em;
 	}
 
 	h4 {
@@ -2211,4 +2211,38 @@ input, select, textarea {
 	  
 	  .formation-item a:hover {
 		text-decoration: underline;
+	  }
+
+	  section h5 {
+		color: #dddddd;
+		font-weight: bold;
+		font-family: Arial, sans-serif;
+	  }
+
+	  /* section li {
+		margin-left: 60px;
+	  } */
+
+	  #one p {
+		margin-left: 10px;
+	  }
+
+	  section p {
+		font-size: 0.8em;
+		margin-left: 60px;
+	  }
+
+	  #experience li {
+		margin-left: 60px;
+	  }
+
+	  h5 a {
+		color: #007BFF;
+		text-decoration: none;
+	  }
+
+	  .legend {
+		font-size: 0.8em;
+		margin-left: 60px;
+		font-style: italic;
 	  }
