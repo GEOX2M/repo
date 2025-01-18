@@ -53,7 +53,7 @@ const translations = {
 	  nacontent: "Belgian",
 	  showp : "Full Portfolio",
 	  titlep: "Passion and Expertise in Video Game Software Development",
-	  cvText: "After completing my higher education in computer science in Brussels, I had the opportunity to work on numerous projects using the Unreal Engine. It was a pleasant surprise to see how my computer science skills and passion for video games could naturally come together, enabling me to build a career specializing in software development. I am highly motivated to continue along this path within a major team project. I look forward to continuing this journey and developing new skills with you!",
+	  cvText: "After completing my higher education in computer science in Brussels, I had the opportunity to work on numerous projects using Unreal Engine. It was a pleasant surprise to see how my computer science skills and passion for video games could naturally come together, enabling me to build a career specializing in software development. I am highly motivated to continue along this path within a major team project. I look forward to continuing this journey and developing new skills with you!",
 	  projects: "Some Projects",
 	  aiassistant: "The goal of this project was to personify an LLM (Large Language Model). To achieve this, I combined OpenAI's real-time console, Unreal Engine, and Nvidia Audio2Face. Creating realistic animations in real time was a challenge, but the most complex part was guiding the responses toward specific and demanding scenarios, such as assistance in an emergency department. My project was well-received by the public at various events, including Living Tomorrow, the Kick Festival, and the Proximus Event in Mechelen.",
 	  jailbirds: "Jailbirds is a real-time animation project in virtual reality to which I made a significant contribution. I was responsible for integrating all assets, creating certain shaders, post-processing effects, and particle systems. My main role was to integrate virtual reality into the project. The experience allows users to move around the environment and observe the film scenes from any angle. Some scenes are triggered only when the user looks at them, adding a unique interactive and immersive dimension.",
@@ -79,7 +79,7 @@ const translations = {
 	  website : "Hosted on <a href='https://github.com/GEOX2M'>github</a>",
 	  experience : "Professional experience",
 	  exp01 : "Lead developper at <a href='https://poolpio.com/'>Poolpio</a> & <a href='https://magicloom.studio'>MagicLoom</a>",
-	  exp01content : "As a development and programming lead at Poolpio and MagicLoom, I oversee the interactive aspects of projects, from analysis to final deployment. Most of my career has been centered around the Unreal Engine, where I have gained versatile expertise: programming game mechanics, creating shaders, animation logic, designing particle effects, lighting, environment modeling, user interface (UI) development, as well as project setup and preparation. I enjoy being as helpful as possible, no matter the field of expertise.",
+	  exp01content : "As a development and programming lead at Poolpio and MagicLoom, I oversee the interactive aspects of projects, from analysis to final deployment. Most of my career has been centered around Unreal Engine, where I have gained versatile expertise: programming game mechanics, creating shaders, animation logic, designing particle effects, lighting, environment modeling, user interface (UI) development, as well as project setup and preparation. I enjoy being as helpful as possible, no matter the field of expertise.",
 	  exp01legend : "January 2021 - Today",
 	},
   };
@@ -114,7 +114,7 @@ function changeLanguage(newlang) {
 	portfolio.classList.add('show'); // Ajoute la classe pour afficher le portfolio
   
 	// Si besoin de manipuler le body
-	document.body.style.overflow = 'auto'; // Exemple : Permettre le défilement
+	document.body.style.overflow = 'visible'; // Exemple : Permettre le défilement
 	document.body.style.overflowX = "hidden";
   });
 (function() {
@@ -134,7 +134,7 @@ function changeLanguage(newlang) {
 	  
 		// Toggle the overflow style of the body
 		const body = document.body;
-		body.style.overflowY = (body.style.overflowY === 'hidden') ? 'auto' : 'hidden';
+		body.style.overflowY = (body.style.overflowY === 'hidden') ? 'visible' : 'hidden';
 	  });
 
 	// Methods/polyfills.
