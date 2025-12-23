@@ -621,3 +621,94 @@ body {
 		height: 5vh;
 		width: 5vh;
 	  }
+
+	/* Responsive rules: mobile-first overrides for tablets and desktops */
+
+	/* Small devices — mobile phones */
+	@media screen and (max-width: 480px) {
+		/* Sidebar becomes a top section */
+		#sidebar {
+			position: relative;
+			width: 100%;
+			height: auto;
+			text-align: center;
+			padding: 2vh 3vw;
+			left: 0;
+			z-index: 50;
+		}
+
+		#sidebar > .inner {
+			align-items: center;
+		}
+
+		.language-selector {
+			position: absolute;
+			top: 1vh;
+			left: 2vw;
+			gap: 1vh;
+		}
+
+		.language-selector img { height: 3vh; width: 4vh; }
+
+		.image.avatar img { width: 120px; max-width: 28%; }
+
+		h1 { font-size: 6vw; border-bottom: none; }
+		h4 { font-size: 4vw; padding: 2% 3%; }
+
+		/* Portfolio full width below the sidebar */
+		#Portfolio {
+			margin-left: 0;
+			width: 100%;
+			padding: 4vh 4vw 6vh 4vw;
+			transform: translateX(0); /* show by default on mobile */
+		}
+
+		.fixed-button {
+			width: auto;
+			right: 3vw;
+			top: 2vh;
+			height: auto;
+			padding: 1vh 2vw;
+			font-size: 3.5vw;
+		}
+
+		.object-grid { grid-template-columns: 1fr; padding: 3vh 2vw; }
+		.object p { font-size: 3.2vw; margin-left: 0; }
+		.object h3 { font-size: 4.5vw; margin: 4% 0; }
+
+		.photos a img { width: 40vw; }
+
+		.media-container { height: auto; }
+	}
+
+	/* Medium devices — tablets */
+	@media screen and (min-width: 481px) and (max-width: 1024px) {
+		#sidebar {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 28vw; /* use viewport width for responsiveness */
+			height: 100vh;
+			padding: 3vh 2.5vw;
+		}
+
+		#Portfolio {
+			margin-left: 28vw;
+			width: calc(100% - 28vw);
+			padding: 6vh 4vw;
+		}
+
+		.image.avatar img { width: 40%; }
+		h1 { font-size: 3.5vh; }
+		h4 { font-size: 2.5vh; padding: 4% 4%; }
+
+		.object-grid { grid-template-columns: repeat(2, 1fr); }
+		.photos a img { width: 18vh; }
+	}
+
+	/* Large screens adjustments (desktop) — keep existing layout but use max widths */
+	@media screen and (min-width: 1025px) {
+		#sidebar { width: 50vh; }
+		#Portfolio { margin-left: 30%; width: calc(100% - 40%); }
+		.object-grid { grid-template-columns: repeat(2, 1fr); }
+	}

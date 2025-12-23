@@ -1,0 +1,11 @@
+{
+  "name": "siteweb-minezgeoffrey",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "npx serve .",
+    "sass:watch": "sass --watch assets/sass:assets/css",
+    "build:sass": "sass assets/sass/main.scss assets/css/main.css --style=expanded",
+    "start": "npm run serve"
+  }
+}
