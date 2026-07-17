@@ -297,7 +297,7 @@
 			entries.forEach((entry) => {
 				const el = entry.target;
 				if (el.tagName === 'IFRAME') {
-					if (entry.isIntersecting && !el.src) {
+					if (entry.isIntersecting && !el.hasAttribute('src')) {
 						el.src = el.getAttribute('data-src');
 						io.unobserve(el);
 					}
