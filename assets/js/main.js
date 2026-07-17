@@ -249,38 +249,6 @@
 	}
 
 	/**
-	 * Videos never autoplay on their own: Vimeo embeds are driven via the Vimeo
-	 * Player API and native <video data-hover-video> elements are driven directly,
-	 * both playing only while the pointer is over their card/tile and resetting
-	 * to the start when the pointer leaves.
-	 */
-	function initHoverVideos() {
-		if (typeof Vimeo !== 'undefined' && Vimeo.Player) {
-			document.querySelectorAll('.video-embed iframe').forEach((iframe) => {
-				const player = new Vimeo.Player(iframe);
-				player.setVolume(0).catch(() => {});
-				const host = iframe.closest('.case-card') || iframe.closest('.tile');
-				if (!host) return;
-				host.addEventListener('mouseenter', () => { player.play().catch(() => {}); });
-				host.addEventListener('mouseleave', () => {
-					player.pause().catch(() => {});
-					player.setCurrentTime(0).catch(() => {});
-				});
-			});
-		}
-
-		document.querySelectorAll('video[data-hover-video]').forEach((video) => {
-			const host = video.closest('.case-card') || video.closest('.tile');
-			if (!host) return;
-			host.addEventListener('mouseenter', () => { video.play().catch(() => {}); });
-			host.addEventListener('mouseleave', () => {
-				video.pause();
-				video.currentTime = 0;
-			});
-		});
-	}
-
-	/**
 	 * Ambient auto-cycling slideshow for project cards backed by more than one
 	 * photo (e.g. Motion Capture, Virtual Production). Independent of hover.
 	 */
@@ -432,7 +400,6 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		changeLanguage(currentLang);
 		initRevealAnimations();
-		initHoverVideos();
 		initSlideshows();
 		initLightbox();
 	});
