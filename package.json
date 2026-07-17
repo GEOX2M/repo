@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "npx serve .",
+    "serve": "serve .",
     "sass:watch": "sass --watch assets/sass:assets/css",
     "build:sass": "sass assets/sass/main.scss assets/css/main.css --style=expanded",
     "start": "npm run serve"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8",
+    "serve": "^14.2.3"
   }
 }
