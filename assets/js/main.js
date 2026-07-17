@@ -271,6 +271,51 @@
 	}
 
 	/**
+	 * Preview videos only start loading/playing once they actually scroll near
+	 * the viewport, and native <video> previews pause again once scrolled away.
+	 * With ~18 embedded Vimeo players on the page (each project video appears
+	 * once in the Projects grid and once in the Gallery), letting all of them
+	 * autoplay at once on page load is far too heavy for a phone — mobile
+	 * browsers commonly refuse or silently fail that much simultaneous video,
+	 * which is why the gallery could appear entirely black. Loading each embed
+	 * lazily keeps only the handful currently on screen active at any time.
+	 */
+	function initLazyMedia() {
+		if (!('IntersectionObserver' in window)) {
+			// No IntersectionObserver support: fall back to loading everything
+			// up front rather than showing nothing.
+			document.querySelectorAll('.video-embed iframe[data-src]').forEach((iframe) => {
+				iframe.src = iframe.getAttribute('data-src');
+			});
+			document.querySelectorAll('video[data-lazy-video]').forEach((video) => {
+				video.play().catch(() => {});
+			});
+			return;
+		}
+
+		const io = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				const el = entry.target;
+				if (el.tagName === 'IFRAME') {
+					if (entry.isIntersecting && !el.src) {
+						el.src = el.getAttribute('data-src');
+						io.unobserve(el);
+					}
+				} else if (el.tagName === 'VIDEO') {
+					if (entry.isIntersecting) {
+						el.play().catch(() => {});
+					} else {
+						el.pause();
+					}
+				}
+			});
+		}, { rootMargin: '200px 0px', threshold: 0.01 });
+
+		document.querySelectorAll('.video-embed iframe[data-src]').forEach((iframe) => io.observe(iframe));
+		document.querySelectorAll('video[data-lazy-video]').forEach((video) => io.observe(video));
+	}
+
+	/**
 	 * Gallery lightbox: clicking (or pressing Enter/Space on) a tile opens its
 	 * image or video large, centered, over a dark backdrop. Videos play with
 	 * sound and controls here — the muted hover-preview is only for the small
@@ -401,6 +446,7 @@
 		changeLanguage(currentLang);
 		initRevealAnimations();
 		initSlideshows();
+		initLazyMedia();
 		initLightbox();
 	});
 
