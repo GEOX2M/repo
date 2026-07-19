@@ -222,7 +222,9 @@ h2.sec-title { font-family: var(--display); font-weight: 700; font-size: clamp(1
 .case-media.slideshow img.active { opacity: 1; }
 
 .video-embed { position: absolute; inset: 0; background: #0c0c0e; }
-.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; pointer-events: none; }
+.case-media video, .photo-grid .tile video { pointer-events: none; }
+.photo-grid .tile video { width: 100%; height: 100%; object-fit: cover; }
 
 /* Expand-to-lightbox affordance, shared by gallery tiles and project card media */
 .tile[data-lightbox], .case-media[data-lightbox] { cursor: pointer; }
@@ -236,14 +238,23 @@ h2.sec-title { font-family: var(--display); font-weight: 700; font-size: clamp(1
 .tile[data-lightbox]:hover::after, .tile[data-lightbox]:focus-visible::after,
 .case-media[data-lightbox]:hover::after, .case-media[data-lightbox]:focus-visible::after { opacity: 1; }
 
-.case-body { flex: 1 1 auto; min-height: 0; overflow: hidden; padding: 1.1rem 1.2rem 1.3rem; position: relative; }
-.case-tag { display: inline-block; font-size: .66rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; padding: .28em .7em; border-radius: 999px; margin-bottom: .7rem; color: var(--tag-color); background: color-mix(in srgb, var(--tag-color) 15%, transparent); }
-.case-card h3 { margin: 0 0 .35em 0; font-size: 1rem; font-weight: 700; font-family: var(--display); }
+.case-body {
+  flex: 1 1 auto; min-height: 0; overflow: hidden; padding: 1.1rem 1.2rem 1.3rem; position: relative;
+  display: flex; flex-direction: column;
+}
+.case-tag { display: inline-block; flex: 0 0 auto; font-size: .66rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; padding: .28em .7em; border-radius: 999px; margin-bottom: .7rem; color: var(--tag-color); background: color-mix(in srgb, var(--tag-color) 15%, transparent); }
+.case-card h3 {
+  flex: 0 0 auto; margin: 0 0 .35em 0; font-size: 1rem; font-weight: 700; font-family: var(--display);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
 .case-card p { margin: 0; font-size: .84rem; color: var(--text-muted); }
 
 /* Long, multi-paragraph card copy is truncated with a fade + "read more" link
-   that opens the full text in the lightbox, instead of an internal scrollbar. */
-.case-copy { position: relative; max-height: 4.6em; overflow: hidden; }
+   that opens the full text in the lightbox, instead of an internal scrollbar.
+   It's the flexible item in the .case-body column so it shrinks first on short
+   cards (long titles, small screens) — the "read more" button below it never
+   gets pushed out of the clipped box and stays reachable on mobile. */
+.case-copy { position: relative; flex: 1 1 auto; min-height: 0; max-height: 4.6em; overflow: hidden; }
 .case-copy p { font-size: .84rem; color: var(--text-muted); margin: 0 0 .8em 0; }
 .case-copy p:last-child { margin-bottom: 0; }
 .case-copy::after {
@@ -252,7 +263,7 @@ h2.sec-title { font-family: var(--display); font-weight: 700; font-size: clamp(1
   pointer-events: none;
 }
 .read-more {
-  display: inline-block; margin-top: .7em; font-family: var(--sans); font-weight: 600; font-size: .78rem;
+  display: inline-block; flex: 0 0 auto; margin-top: .7em; font-family: var(--sans); font-weight: 600; font-size: .78rem;
   color: var(--accent); background: none; border: none; padding: 0; cursor: pointer;
 }
 .read-more:hover { text-decoration: underline; }
