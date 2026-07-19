@@ -198,13 +198,10 @@
 	 * Trigger file download for CV. Filenames are hard-coded in files/; if you rename files update the names here.
 	 */
 	function downloadCV() {
-		const url = currentLang === 'en'
-			? './files/CV Minez Geoffrey 2024 en.pdf'
-			: './files/CV Minez Geoffrey 2024 fr.pdf';
-
+		const filename = 'CV Minez Geoffrey.pdf';
 		const a = document.createElement('a');
-		a.href = url;
-		a.download = decodeURIComponent(url.split('/').pop());
+		a.href = './files/' + encodeURIComponent(filename);
+		a.download = filename;
 		document.body.appendChild(a);
 		a.click();
 		a.remove();
